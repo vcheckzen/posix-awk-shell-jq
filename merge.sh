@@ -10,7 +10,7 @@ OUTPUT_FILE="$BASE_DIR"/jq.sh
 TEMPLATE=$(
     cat <<\EOF
 _%s() {
-    printf "%s" "$1" | awk -v k="$2" -e \
+    printf "%s" "$1" | awk -v k="$2" \
 '%s
 '
 }\n\n

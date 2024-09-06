@@ -95,4 +95,4 @@ jq "$@"
 EOF
 } >"$OUTPUT_FILE"
 
-echo merged all files to jq.sh
+echo "all libs are merged to $OUTPUT_FILE"

@@ -1378,6 +1378,7 @@ jq_test '\
 jq_test_domain=$(echo "$JQ_TEST_COMPRESSED" | awk -v k="domain" -f "$JQ_OBJ_AWK")
 jq_test "$jq_test_domain" "$JQ_NUM_AWK" ttl 600
 jq_test '{"id":null,}' "$JQ_NUM_AWK" id null
+jq_test '{"price":3.15278}' "$JQ_NUM_AWK" price '3.15278'
 # pretty
 jq_test "$JQ_TEST_USER" "$JQ_NUM_AWK" id 18008498
 jq_test "$JQ_TEST_USER" "$JQ_NUM_AWK" public_repos 19
@@ -1388,6 +1389,11 @@ jq_test '\
   "id": null,
 }
 ' "$JQ_NUM_AWK" id null
+jq_test '\
+{
+  "price": 3.15278
+}
+' "$JQ_NUM_AWK" price '3.15278'
 
 # test jq_str.awk
 # compressed
